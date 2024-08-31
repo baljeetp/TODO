@@ -1,0 +1,18 @@
+.png-img{
+    height: 30px;
+    width: 50px;
+}
+.sign{
+    background-color: rgb(186, 92, 109);
+    border-radius: 5px;
+    color: rgb(240, 223, 223) !important;
+    font-weight: bold;
+}
+.todo{
+    color: rgb(224, 57, 20);
+}
+.todo-icon{
+    height: 25px;
+    color:black;
+    width: 35px;
+}
