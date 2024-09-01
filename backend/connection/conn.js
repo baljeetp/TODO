@@ -8,4 +8,4 @@ const conn=async(req,res)=>{
       res.status(400).json({message:"not connected",});
     }
 };
-conn();
+module.exports=conn;
