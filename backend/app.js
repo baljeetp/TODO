@@ -10,8 +10,9 @@ connectMongoDB();
 app.use(express.json());
 
 app.use(cors());
-app.get("/", (req, res) => {
-    app.use(express.static(path.resolve(__dirname, "/frontend")));
+app.use(express.static(path.resolve(__dirname, "/frontend/public")));
+app.get("*", (req, res) => {
+    
     res.sendFile(path.resolve(__dirname, "/frontend/public/index.html"));
     });
 // app.get("/",(req,res)=>{
