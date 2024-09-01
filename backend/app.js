@@ -1,9 +1,12 @@
 const express=require("express");
 const app=express();
 const cors=require("cors");
-require("./connection/conn");
+const connectMongoDB= require("./connection/conn");
 const auth=require("./routes/auth");
 const list=require("./routes/list");
+
+connectMongoDB();
+
 app.use(express.json());
 
 app.use(cors());
