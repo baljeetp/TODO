@@ -19,7 +19,7 @@ const Update=({display,update})=>{
    setInputs({...Inputs,[name]:value});
   }
   const submit= async()=>{
-    await axios.put(`http://localhost:1000/api/v2/updateTask/${update._id}`,Inputs)
+    await axios.put(`https://todo-1-85tz.onrender.com/api/v2/updateTask/${update._id}`,Inputs)
     .then((response)=>{
       toast.success(response.data.message);
       display("none");

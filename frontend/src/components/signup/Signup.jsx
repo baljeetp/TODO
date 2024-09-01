@@ -16,7 +16,7 @@ const Signup=()=>{
     };
     const submit= async (e)=>{
         e.preventDefault();
-       await axios.post(`http://localhost:1000/api/v1/register`,Inputs).then((response)=>{
+       await axios.post(`https://todo-1-85tz.onrender.com/api/v1/register`,Inputs).then((response)=>{
         if(response.data.message==="user already exists")
         alert(response.data.message);
        else{

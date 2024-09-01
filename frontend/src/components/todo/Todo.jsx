@@ -24,7 +24,7 @@ import React,{useEffect,useState} from "react";
         else{
             if(id)
             {
-               await axios.post(`http://localhost:1000/api/v2/addTask`,{
+               await axios.post(`https://todo-1-85tz.onrender.com/api/v2/addTask`,{
                 title:Inputs.title,
                 body:Inputs.body,
                 id:id
@@ -45,7 +45,7 @@ import React,{useEffect,useState} from "react";
     };
    const del=async(cardId)=>{
     if(id){
-        await axios.delete(`http://localhost:1000/api/v2/deleteTask/${cardId}`,{data:{id:id},})
+        await axios.delete(`https://todo-1-85tz.onrender.com/api/v2/deleteTask/${cardId}`,{data:{id:id},})
        .then(()=>{
         toast.success("Your task is deleted");
        });
@@ -66,7 +66,7 @@ import React,{useEffect,useState} from "react";
     const fetch = async () => {
         try {
             if (id) {
-                const response = await axios.get(`http://localhost:1000/api/v2/getTasks/${id}`);
+                const response = await axios.get(`https://todo-1-85tz.onrender.com/api/v2/getTasks/${id}`);
                 setArray(response.data.list);
             } else {
                 console.error('ID is undefined.');
